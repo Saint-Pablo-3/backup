@@ -25,13 +25,13 @@
 
 1. `С помощью официальной документации приведите пример команды резервирования данных и восстановления БД (pgdump/pgrestore).`
 
-`Ответ: 
+`Ответ: <br>
 - pg_dump -U username -d dbname -F c -f backup_file.dump
 - pg_restore -U username -d dbname backup_file.dump`
 
 2. `2.1.* Возможно ли автоматизировать этот процесс? Если да, то как?`
 `Ответ:
-с помощью Cron можем автоматизировать:
+с помощью Cron можем автоматизировать:<br>
 0 3 * * * pg_dump -U username -d dbname -F c -f /backups/backup_file_$(date +\%Y-\%m-\%d).dump`
 ---
 
@@ -40,7 +40,7 @@
 `3.1. С помощью официальной документации приведите пример команды инкрементного резервного копирования базы данных MySQL.`
 
 `Ответ: можно сделать с помощью Percona XtraBackup 
-(полный бэкап):
+(полный бэкап):<br>
 xtrabackup --backup --target-dir=/backups/full --user=root --password=pass 
 
 (инкрементный бэкап):<br>

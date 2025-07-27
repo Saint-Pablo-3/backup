@@ -43,7 +43,7 @@
 (полный бэкап):
 xtrabackup --backup --target-dir=/backups/full --user=root --password=pass 
 
-(инкрементный бэкап)
+(инкрементный бэкап):<br>
 xtrabackup --backup --target-dir=/backups/inc1 --incremental-basedir=/backups/full --user=root --password=pass 
 `
 
